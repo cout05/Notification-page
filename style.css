@@ -1,0 +1,179 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* general style*/
+
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue1: hsl(211, 68%, 94%);
+  --Light-grayish-blue2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+body {
+  background-color: var(--Very-light-grayish-blue);
+  font-family: "Ubuntu", sans-serif;
+}
+
+.notif_page {
+  background-color: var(--White);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.number {
+  color: var(--White);
+  background-color: var(--Blue);
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 3px;
+}
+
+#markAll {
+  border: none;
+  background-color: var(--White);
+  cursor: pointer;
+}
+
+#markAll:hover {
+  color: var(--Blue);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.notif_container {
+  background-color: var(--Very-light-grayish-blue1);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.description {
+  color: var(--Dark-grayish-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1rem;
+}
+
+.profiles {
+  width: 50px;
+}
+
+.name {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.name:hover {
+  color: var(--Blue);
+}
+
+.activity {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.activity:hover {
+  color: var(--Blue);
+}
+
+.unread {
+  display: inline-block;
+  background-color: var(--Red);
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+}
+
+.message {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid var(--Grayish-blue);
+  border-radius: 0.5rem;
+}
+
+.message:hover {
+  cursor: pointer;
+  background-color: var(--Light-grayish-blue1);
+}
+
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    place-items: center;
+  }
+
+  .notif_page {
+    width: 600px;
+  }
+}
